@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED: float = 400.0
+const SPEED: float = 450.0
 const MAX_POSITION_TILT: float = deg_to_rad(90.0)
 const MAX_MOVEMENT_TILT: float = deg_to_rad(15.0)
 const TILT_SPEED: float = deg_to_rad(180.0)

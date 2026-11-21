@@ -4,23 +4,27 @@
 [ext_resource type="PackedScene" uid="uid://c83nkxwro5bia" path="res://Scenes/paddle.tscn" id="2_wowpa"]
 [ext_resource type="PackedScene" uid="uid://we0b6wekqfbc" path="res://Scenes/barrier.tscn" id="3_i6g32"]
 [ext_resource type="PackedScene" uid="uid://5xynjm4rrdek" path="res://Scenes/ball.tscn" id="4_1l0tm"]
+[ext_resource type="PackedScene" uid="uid://dwe2p8gtstggp" path="res://Scenes/margins.tscn" id="5_wowpa"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p3ca1"]
 normal = Vector2(0, 1)
+distance = 18.0
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w343b"]
+distance = -15.0
 
 [node name="game" type="Node2D" unique_id=1719917339]
 position = Vector2(165, 78)
 
 [node name="Table" type="Sprite2D" parent="." unique_id=1457147274]
-position = Vector2(640.55554, 364)
+position = Vector2(640, 380)
 scale = Vector2(0.67037034, 0.67037034)
 texture = ExtResource("1_3dryh")
 
 [node name="Paddle" parent="." unique_id=1852995270 instance=ExtResource("2_wowpa")]
 position = Vector2(60, 350)
 scale = Vector2(0.6, 0.6)
+collision_mask = 1
 
 [node name="walls" type="StaticBody2D" parent="." unique_id=1708959195]
 
@@ -38,3 +42,5 @@ position = Vector2(1185, 364)
 [node name="Ball" parent="." unique_id=1972545983 instance=ExtResource("4_1l0tm")]
 position = Vector2(641, 364)
 scale = Vector2(0.2, 0.2)
+
+[node name="Margins" parent="." unique_id=815624557 instance=ExtResource("5_wowpa")]

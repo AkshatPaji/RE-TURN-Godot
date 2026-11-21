@@ -1,0 +1,69 @@
+[gd_scene format=3 uid="uid://dwe2p8gtstggp"]
+
+[sub_resource type="SystemFont" id="HudFont"]
+font_names = PackedStringArray("Arial")
+font_weight = 700
+
+[sub_resource type="LabelSettings" id="TitleSettings"]
+font = SubResource("HudFont")
+font_color = Color(0.48, 0.95, 0.95, 1)
+font_size = 40
+outline_size = 3
+outline_color = Color(0.02, 0.08, 0.13, 1)
+
+[sub_resource type="LabelSettings" id="StatsSettings"]
+font = SubResource("HudFont")
+font_color = Color(0.94, 0.97, 1, 1)
+font_size = 24
+outline_size = 2
+outline_color = Color(0.02, 0.08, 0.13, 1)
+
+[sub_resource type="StyleBoxFlat" id="StatsPanelStyle"]
+bg_color = Color(0.02, 0.06, 0.1, 0.82)
+border_color = Color(0.24, 0.82, 0.86, 0.9)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+corner_radius_top_left = 12
+corner_radius_top_right = 12
+corner_radius_bottom_right = 12
+corner_radius_bottom_left = 12
+content_margin_left = 20.0
+content_margin_top = 8.0
+content_margin_right = 20.0
+content_margin_bottom = 8.0
+
+[node name="Margins" type="CanvasLayer" unique_id=815624557]
+
+[node name="StatsPanel" type="PanelContainer" parent="." unique_id=213904813]
+anchor_right = 1.0
+offset_left = 20.0
+offset_top = 12.0
+offset_right = -20.0
+offset_bottom = 88.0
+theme_override_styles/panel = SubResource("StatsPanelStyle")
+
+[node name="Stats" type="HBoxContainer" parent="StatsPanel" unique_id=213904814]
+layout_mode = 2
+theme_override_constants/separation = 28
+
+[node name="GameName" type="Label" parent="StatsPanel/Stats" unique_id=213904812]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+text = "RE:TURN"
+label_settings = SubResource("TitleSettings")
+
+[node name="Spacer" type="Control" parent="StatsPanel/Stats" unique_id=213904816]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="HighScore" type="Label" parent="StatsPanel/Stats" unique_id=213904815]
+layout_mode = 2
+text = "HIGH SCORE  00000"
+label_settings = SubResource("StatsSettings")
+
+[node name="Score" type="Label" parent="StatsPanel/Stats" unique_id=838181681]
+layout_mode = 2
+text = "SCORE  00000"
+label_settings = SubResource("StatsSettings")
