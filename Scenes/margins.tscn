@@ -1,16 +1,16 @@
 [gd_scene format=3 uid="uid://dwe2p8gtstggp"]
 
 [sub_resource type="StyleBoxFlat" id="StatsPanelStyle"]
-content_margin_left = 20.0
+content_margin_left = 16.0
 content_margin_top = 8.0
-content_margin_right = 20.0
+content_margin_right = 16.0
 content_margin_bottom = 8.0
-bg_color = Color(0.2, 0.11, 0.34, 0.94)
+bg_color = Color(0.31, 0.16, 0.49, 0.98)
 border_width_left = 1
 border_width_top = 1
 border_width_right = 1
 border_width_bottom = 1
-border_color = Color(0.96, 0.94, 1, 0.9)
+border_color = Color(0.76, 0.64, 0.9, 1)
 corner_radius_top_left = 8
 corner_radius_top_right = 8
 corner_radius_bottom_right = 8
@@ -23,23 +23,22 @@ subpixel_positioning = 0
 
 [sub_resource type="LabelSettings" id="TitleSettings"]
 font = SubResource("HudFont")
-font_size = 47
-font_color = Color(0.98, 0.96, 1, 1)
-outline_size = 3
-outline_color = Color(0.15, 0.08, 0.25, 1)
+font_size = 42
+font_color = Color(0.94, 0.9, 0.81, 1)
+outline_size = 2
+outline_color = Color(0.16, 0.1, 0.24, 1)
 
 [sub_resource type="LabelSettings" id="HighScoreSettings"]
 font = SubResource("HudFont")
-font_size = 30
-font_color = Color(1, 0.82, 0.49, 1)
+font_size = 34
+font_color = Color(1, 0.76, 0.36, 1)
 outline_size = 2
-outline_color = Color(0.15, 0.08, 0.25, 1)
+outline_color = Color(0.16, 0.1, 0.24, 1)
 
 [sub_resource type="LabelSettings" id="ScoreSettings"]
 font = SubResource("HudFont")
-font_size = 30
-font_color = Color(0.98, 0.96, 1, 1)
-outline_size = 2
+font_size = 34
+font_color = Color(0.58, 0.92, 0.35, 1)
 outline_color = Color(0.15, 0.08, 0.25, 1)
 
 [node name="Margins" type="CanvasLayer" unique_id=815624557]
@@ -55,7 +54,7 @@ theme_override_styles/panel = SubResource("StatsPanelStyle")
 
 [node name="Stats" type="HBoxContainer" parent="StatsPanel" unique_id=213904814]
 layout_mode = 2
-theme_override_constants/separation = 28
+theme_override_constants/separation = 22
 
 [node name="GameName" type="Label" parent="StatsPanel/Stats" unique_id=213904812]
 custom_minimum_size = Vector2(250, 0)
@@ -64,9 +63,9 @@ text = "RE:TURN"
 label_settings = SubResource("TitleSettings")
 
 [node name="RedAccent" type="ColorRect" parent="StatsPanel/Stats" unique_id=213904817]
-custom_minimum_size = Vector2(3, 28)
+custom_minimum_size = Vector2(3, 24)
 layout_mode = 2
-color = Color(0.68, 0.18, 0.2, 1)
+color = Color(0.72, 0.2, 0.19, 1)
 
 [node name="Spacer" type="Control" parent="StatsPanel/Stats" unique_id=213904816]
 layout_mode = 2
@@ -74,10 +73,28 @@ size_flags_horizontal = 3
 
 [node name="HighScore" type="Label" parent="StatsPanel/Stats" unique_id=213904815]
 layout_mode = 2
-text = "HIGH SCORE  00000"
+text = "High score  00000"
 label_settings = SubResource("HighScoreSettings")
 
 [node name="Score" type="Label" parent="StatsPanel/Stats" unique_id=838181681]
 layout_mode = 2
-text = "SCORE  00000"
+text = "Score  00000"
 label_settings = SubResource("ScoreSettings")
+
+[node name="ControlsPanel" type="PanelContainer" parent="." unique_id=213904818]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -210.0
+offset_top = -73.0
+offset_right = 210.0
+offset_bottom = -9.0
+theme_override_styles/panel = SubResource("StatsPanelStyle")
+
+[node name="Controls" type="Label" parent="ControlsPanel" unique_id=213904819]
+layout_mode = 2
+text = "↑  Up       ↓  Down"
+label_settings = SubResource("ScoreSettings")
+horizontal_alignment = 1

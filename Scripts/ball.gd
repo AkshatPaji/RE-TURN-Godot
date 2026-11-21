@@ -87,5 +87,5 @@ func _save_high_score() -> void:
 	config.save(HIGH_SCORE_FILE)
 
 func _update_score_labels() -> void:
-	score_label.text = "SCORE  %05d" % score
-	high_score_label.text = "HIGH SCORE  %05d" % high_score
+	score_label.text = "Score  %05d" % score
+	high_score_label.text = "High score  %05d" % high_score

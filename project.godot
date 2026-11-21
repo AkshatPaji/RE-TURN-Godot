@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="RE:TURN - Godot"
-run/main_scene="uid://3t51e8debkhv"
+run/main_scene="uid://ce56v3enbxhnr"
 config/features=PackedStringArray("4.7", "GL Compatibility")
 config/icon="res://icon.svg"
 
