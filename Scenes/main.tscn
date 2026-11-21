@@ -1,0 +1,30 @@
+[gd_scene format=3 uid="uid://3t51e8debkhv"]
+
+[ext_resource type="Texture2D" uid="uid://di7e3bqjd2gr2" path="res://assets/Table.png" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://c83nkxwro5bia" path="res://Scenes/paddle.tscn" id="2_8gbba"]
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p3ca1"]
+normal = Vector2(0, 1)
+
+[sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_w343b"]
+
+[node name="main" type="Node2D" unique_id=1719917339]
+
+[node name="Table" type="Sprite2D" parent="." unique_id=1457147274]
+position = Vector2(640.55554, 364)
+scale = Vector2(0.67037034, 0.67037034)
+texture = ExtResource("1_bo1nx")
+
+[node name="Paddle" parent="." unique_id=1852995270 instance=ExtResource("2_8gbba")]
+position = Vector2(60, 350)
+scale = Vector2(0.6, 0.6)
+
+[node name="walls" type="StaticBody2D" parent="." unique_id=1708959195]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="walls" unique_id=2045611649]
+position = Vector2(0, 60)
+shape = SubResource("WorldBoundaryShape2D_p3ca1")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="walls" unique_id=961979535]
+position = Vector2(2, 665)
+shape = SubResource("WorldBoundaryShape2D_w343b")

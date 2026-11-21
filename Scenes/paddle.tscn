@@ -1,0 +1,21 @@
+[gd_scene format=3 uid="uid://c83nkxwro5bia"]
+
+[ext_resource type="Texture2D" uid="uid://oivmjt7m8em4" path="res://assets/racket.png" id="1_0sbc1"]
+[ext_resource type="Script" uid="uid://dpqj1yfj68uwp" path="res://Scripts/paddle.gd" id="1_krcey"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_p3ca1"]
+radius = 78.488495
+height = 173.94702
+
+[node name="Paddle" type="CharacterBody2D" unique_id=1852995270]
+motion_mode = 1
+script = ExtResource("1_krcey")
+metadata/_edit_group_ = true
+
+[node name="Racket" type="Sprite2D" parent="." unique_id=394265532]
+texture = ExtResource("1_0sbc1")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=2106532511]
+position = Vector2(6, -1.0000305)
+rotation = -2.35629
+shape = SubResource("CapsuleShape2D_p3ca1")
