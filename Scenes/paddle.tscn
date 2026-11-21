@@ -8,9 +8,9 @@ radius = 78.488495
 height = 173.94702
 
 [node name="Paddle" type="CharacterBody2D" unique_id=1852995270]
-position = Vector2(1, 0)
-rotation = 0.75049156
 motion_mode = 1
+collision_mask = 0
+input_pickable = false
 script = ExtResource("1_krcey")
 metadata/_edit_group_ = true
 
