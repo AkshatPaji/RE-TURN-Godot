@@ -1,14 +1,8 @@
 [gd_scene format=3 uid="uid://ce56v3enbxhnr"]
 
-[node name="VBoxContainer" type="VBoxContainer" unique_id=1427069511]
-offset_right = 1320.0
-offset_bottom = 920.0
+[ext_resource type="PackedScene" uid="uid://3t51e8debkhv" path="res://Scenes/game.tscn" id="1_bo1nx"]
+[ext_resource type="PackedScene" uid="uid://dwe2p8gtstggp" path="res://Scenes/margins.tscn" id="2_8gbba"]
 
-[node name="Control" type="Control" parent="." unique_id=1653773468]
-layout_mode = 2
+[node name="main" unique_id=1719917339 instance=ExtResource("1_bo1nx")]
 
-[node name="Label" type="Label" parent="Control" unique_id=838181680]
-layout_mode = 0
-offset_right = 542.0
-offset_bottom = 52.0
-text = "RE:TURN - GODOT"
+[node name="Margins" parent="." index="5" unique_id=815624557 instance=ExtResource("2_8gbba")]

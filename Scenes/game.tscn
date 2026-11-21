@@ -4,7 +4,6 @@
 [ext_resource type="PackedScene" uid="uid://c83nkxwro5bia" path="res://Scenes/paddle.tscn" id="2_wowpa"]
 [ext_resource type="PackedScene" uid="uid://we0b6wekqfbc" path="res://Scenes/barrier.tscn" id="3_i6g32"]
 [ext_resource type="PackedScene" uid="uid://5xynjm4rrdek" path="res://Scenes/ball.tscn" id="4_1l0tm"]
-[ext_resource type="PackedScene" uid="uid://dwe2p8gtstggp" path="res://Scenes/margins.tscn" id="5_wowpa"]
 
 [sub_resource type="WorldBoundaryShape2D" id="WorldBoundaryShape2D_p3ca1"]
 normal = Vector2(0, 1)
@@ -37,10 +36,8 @@ position = Vector2(2, 655)
 shape = SubResource("WorldBoundaryShape2D_w343b")
 
 [node name="barrier" parent="." unique_id=1335119937 instance=ExtResource("3_i6g32")]
-position = Vector2(1185, 364)
+position = Vector2(1185, 379)
 
 [node name="Ball" parent="." unique_id=1972545983 instance=ExtResource("4_1l0tm")]
 position = Vector2(641, 364)
 scale = Vector2(0.2, 0.2)
-
-[node name="Margins" parent="." unique_id=815624557 instance=ExtResource("5_wowpa")]
