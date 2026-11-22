@@ -20,7 +20,7 @@
 1. duplicate the project .zip file from github
 2. Open the project in Godot4 and press **F5** to run the game.
 
-1. Simply log onto [Itch.io : return-godot](linktobeadded) and run the game directly on the web
+1. Simply log onto [Itch.io : return-godot](https://akshatpaji.itch.io/return-godot) and run the game directly on the web
 
 ## Project structure
 
