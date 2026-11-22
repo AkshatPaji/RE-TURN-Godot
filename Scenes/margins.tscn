@@ -41,6 +41,22 @@ font_size = 34
 font_color = Color(0.58, 0.92, 0.35, 1)
 outline_color = Color(0.15, 0.08, 0.25, 1)
 
+[sub_resource type="StyleBoxFlat" id="RestartHoverStyle"]
+content_margin_left = 24.0
+content_margin_top = 12.0
+content_margin_right = 24.0
+content_margin_bottom = 12.0
+bg_color = Color(0.4, 0.25, 0.58, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(1, 0.76, 0.36, 1)
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+
 [node name="Margins" type="CanvasLayer" unique_id=815624557]
 
 [node name="StatsPanel" type="PanelContainer" parent="." unique_id=213904813]
@@ -73,7 +89,7 @@ size_flags_horizontal = 3
 
 [node name="HighScore" type="Label" parent="StatsPanel/Stats" unique_id=213904815]
 layout_mode = 2
-text = "High score  00000"
+text = "High Score  00000"
 label_settings = SubResource("HighScoreSettings")
 
 [node name="Score" type="Label" parent="StatsPanel/Stats" unique_id=838181681]
@@ -98,3 +114,24 @@ layout_mode = 2
 text = "↑  Up       ↓  Down"
 label_settings = SubResource("ScoreSettings")
 horizontal_alignment = 1
+
+[node name="RestartButton" type="Button" parent="." unique_id=213904820]
+visible = false
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -48.0
+offset_right = 170.0
+offset_bottom = 48.0
+focus_mode = 0
+theme_override_colors/font_color = Color(0.94, 0.9, 0.81, 1)
+theme_override_colors/font_hover_color = Color(1, 0.76, 0.36, 1)
+theme_override_fonts/font = SubResource("HudFont")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/normal = SubResource("StatsPanelStyle")
+theme_override_styles/pressed = SubResource("StatsPanelStyle")
+theme_override_styles/hover = SubResource("RestartHoverStyle")
+text = "RESTART"

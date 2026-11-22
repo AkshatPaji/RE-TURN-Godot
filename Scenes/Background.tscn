@@ -1,0 +1,6 @@
+[gd_scene format=3 uid="uid://boms2ru3xede8"]
+
+[node name="Orange Rectangle" type="ColorRect" unique_id=2131075333]
+offset_right = 1600.0
+offset_bottom = 900.0
+color = Color(0.76404744, 0.3970435, 0.2679125, 1)

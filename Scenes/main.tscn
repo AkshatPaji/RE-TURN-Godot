@@ -2,7 +2,14 @@
 
 [ext_resource type="PackedScene" uid="uid://3t51e8debkhv" path="res://Scenes/game.tscn" id="1_bo1nx"]
 [ext_resource type="PackedScene" uid="uid://dwe2p8gtstggp" path="res://Scenes/margins.tscn" id="2_8gbba"]
+[ext_resource type="PackedScene" uid="uid://boms2ru3xede8" path="res://Scenes/Background.tscn" id="2_jjvhh"]
 
 [node name="main" unique_id=1719917339 instance=ExtResource("1_bo1nx")]
 
-[node name="Margins" parent="." index="5" unique_id=815624557 instance=ExtResource("2_8gbba")]
+[node name="Orange Rectangle" parent="." index="0" unique_id=2131075333 instance=ExtResource("2_jjvhh")]
+offset_left = -166.0
+offset_top = -80.0
+offset_right = 1434.0
+offset_bottom = 820.0
+
+[node name="Margins" parent="." index="6" unique_id=815624557 instance=ExtResource("2_8gbba")]

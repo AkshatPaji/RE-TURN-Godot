@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-const SPEED: float = 470.0
+const SPEED: float = 500.0
 const MIN_SPEED: float = 440.0
 const MAX_SPEED: float = 600.0
 const MAX_BOUNCE_ANGLE: float = deg_to_rad(50.0)
@@ -11,14 +11,21 @@ var high_score: int = 0
 
 @onready var score_label: Label = get_node("../Margins/StatsPanel/Stats/Score")
 @onready var high_score_label: Label = get_node("../Margins/StatsPanel/Stats/HighScore")
+@onready var restart_button: Button = get_node("../Margins/RestartButton")
+@onready var paddle: CharacterBody2D = get_node("../Paddle")
 
 func _ready() -> void:
 	start_position = global_position
 	_load_high_score()
 	_update_score_labels()
+	restart_button.pressed.connect(_on_restart_pressed)
 	reset_ball()
 
 func _physics_process(delta: float) -> void:
+	if global_position.x < paddle.global_position.x - 100.0:
+		_end_game()
+		return
+
 	var collision: KinematicCollision2D = move_and_collide(velocity * delta)
 	if collision:
 		var normal: Vector2 = collision.get_normal()
@@ -89,3 +96,13 @@ func _save_high_score() -> void:
 func _update_score_labels() -> void:
 	score_label.text = "Score  %05d" % score
 	high_score_label.text = "High score  %05d" % high_score
+
+func _end_game() -> void:
+	velocity = Vector2.ZERO
+	set_physics_process(false)
+	paddle.set_physics_process(false)
+	restart_button.show()
+
+func _on_restart_pressed() -> void:
+	get_tree().reload_current_scene()
+
