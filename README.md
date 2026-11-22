@@ -33,3 +33,7 @@
 - `Scenes/` contains the game, ball, paddle, barrier, and HUD scenes.
 - `Scripts/` contains the ball and paddle movement scripts.
 - `Assets/` contains the table, racket, and ball artwork.
+
+## Assets
+Logo - [Canva Template](https://www.canva.com/templates/EAGAuX8UNPQ/)
+Table, Racket & Ball - Custom Made using Inspiration from internet and my own table tennis equipment 
