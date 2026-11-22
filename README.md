@@ -31,7 +31,7 @@ really? u need guide for pong ping? ping Pong*.. jk jk
 
 ## AI Usage
 
-yes, i used AI (Copilot and Codex(dum dum)) to help me debug and figure out some of the godot stuff i couldn't. since this is my first godot project, i needed quite a bit of help with features and exporting. rest i mostly relied on documentation, youtube tutorials and other games for inspiration.
+yes, i used AI (Copilot and Codex(dum dum)) to help me debug and figure out some of the godot stuff i couldn't. since this is my first godot project, i needed quite a bit of help with features and exporting. rest i mostly relied on documentation, youtube tutorials and other games for inspiration. now for number not sure like that but ig 10-15%
 
 ## Assets
 
