@@ -22,6 +22,12 @@
 
 1. Simply log onto [Itch.io : return-godot](https://akshatpaji.itch.io/return-godot) and run the game directly on the web
 
+## Screenshot
+<img width="1600" height="900" alt="image" src="https://github.com/user-attachments/assets/9fcf04b4-2ccd-4e9e-8ce1-46c1c8d30180" />
+
+## AI Usage
+#### I have used AI (Copilot and Codex) to help me debug and as this is my first Godot project it also helped me with the vast number of features and exporting. Rest i relied on documentaions and other games or tutorials on youtube for help (majority).
+
 ## Project structure
 
 - `Scenes/` contains the game, ball, paddle, barrier, and HUD scenes.
